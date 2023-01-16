@@ -7,7 +7,7 @@ from .models import ChatLog
 from .models import User
 from django.contrib.auth import authenticate, login, logout
 
-openai.api_key = "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"
+openai.api_key = "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"
 
 
 def chatbot_response(user_input):
