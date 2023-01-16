@@ -69,10 +69,10 @@ a {
 </head>
 <body>
 
-<form action="{% url 'login_page' %}" method="post">
+<form action="{% url 'register_page' %}" method="post">
     {% csrf_token %}
   <div class="container">
-    <h1>Login</h1>
+    <h1>Register</h1>
       {% if login_error %}
         <p style="color:red;">{{login_error}}!</p>
       {% endif %}
@@ -84,12 +84,18 @@ a {
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="password" id="psw" required>
 
-    <button type="submit" class="registerbtn">login</button>
+    <label for="name"><b>Name</b></label>
+    <input type="text" placeholder="Enter Name" name="name" id="name" required>
+
+    <label for="mobile_number"><b>Mobile Number</b></label>
+    <input type="text" placeholder="Enter Mobile Number" name="mobile_number" id="mobile_number" required>
+
+    <button type="submit" class="registerbtn">Register</button>
+  </div>
+  <div class="container signin">
+    <p>Already have an account? <a href="{% url 'login_page' %}">Sign in</a>.</p>
   </div>
 
-  <div class="container signin">
-    <p>Don't have an account? <a href="{% url 'register_page' %}">Sign Up</a>.</p>
-  </div>
 </form>
 
 </body>

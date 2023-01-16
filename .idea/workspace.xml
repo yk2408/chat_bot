@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed13566a-0f3c-4bf4-babc-21620e6066ab" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/login_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/sign_up.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/chat_bot.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/chat_bot.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login_page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
     </list>
