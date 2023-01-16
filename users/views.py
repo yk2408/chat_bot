@@ -7,7 +7,7 @@ from .models import ChatLog
 from .models import User
 from django.contrib.auth import authenticate, login, logout
 
-openai.api_key = "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"
+openai.api_key = "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"
 
 
 def chatbot_response(user_input):
@@ -28,7 +28,10 @@ def chat_page(request):
     user = request.user
     if request.method == "POST":
         user_input = request.POST["msg"]
-        response = chatbot_response(user_input)
+        try:
+            response = chatbot_response(user_input)
+        except:
+            return render(request, "chat_bot.html", context={'error': 'Incorrect API key!! Something went worng'})
         ChatLog.objects.create(user=user, send_msg=user_input, receive_msg=response)
 
     chat_data = ChatLog.objects.filter(user=user)[::-1]
@@ -71,6 +74,7 @@ def register_page(request):
         user = User(email=email, full_name=name, phone_number=mobile_number)
         user.set_password(user_password)
         user.save()
+        login(request, user)
         return redirect("/chat-page")
 
     return render(request, "sign_up.html")

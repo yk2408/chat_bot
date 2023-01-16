@@ -101,7 +101,9 @@ div {
 </head>
 <body>
 
-<h2></h2>
+{% if error %}
+<h2 style="color:red;"> {{ error }}</h2>
+{% else %}
 <h2>Hey, "{{name}}" Welcome to chatBot</h2>
 <div>
     <form action="{% url 'chat_page' %}" method="post">
@@ -124,5 +126,6 @@ div {
 </div>
 
 {% endfor %}
+{% endif %}
 </body>
 </html>
